@@ -1,0 +1,49 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "defaultProject": "app",
+  "projects": {
+    "app": {
+      "projectType": "application",
+      "root": "",
+      "sourceRoot": "src",
+      "prefix": "dsj",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "baseHref": "/dsj4dev/",
+            "outputPath": "dist",
+            "index": "src/index.html",
+            "main": "src/main.ts",
+            "polyfills": "src/polyfills.ts",
+            "tsConfig": "tsconfig-app.json",
+            "aot": true,
+            "styles": [
+              "src/styles.scss"
+            ]
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "app:build",
+            "port": 10200,
+            "open": true
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "tsconfig-app.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

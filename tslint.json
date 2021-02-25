@@ -1,0 +1,188 @@
+{
+  "extends": "tslint:recommended",
+  "rulesDirectory": [
+    "codelyzer"
+  ],
+  "rules": {
+    "component-selector": [
+      true,
+      "element",
+      [
+        "dsj"
+      ],
+      "kebab-case"
+    ],
+    "directive-selector": [
+      true,
+      "attribute",
+      [
+        "dsj"
+      ],
+      "camelCase"
+    ],
+    "align": [
+      true,
+      "parameters",
+      "arguments",
+      "statements"
+    ],
+    "binary-expression-operand-order": true,
+    "class-name": true,
+    "comment-format": false,
+    "component-class-suffix": [
+      true,
+      "Component"
+    ],
+    "contextual-decorator": true,
+    "contextual-lifecycle": true,
+    "curly": true,
+    "directive-class-suffix": [
+      true,
+      "Directive"
+    ],
+    "eofline": true,
+    "forin": true,
+    "import-blacklist": [
+      true,
+      "rxjs/internal/operators",
+      "rxjs/index"
+    ],
+    "import-spacing": true,
+    "indent": [
+      true,
+      "spaces"
+    ],
+    "interface-name": false,
+    "jsdoc-format": true,
+    "label-position": true,
+    "max-line-length": [
+      true,
+      140
+    ],
+    "member-ordering": [
+      true,
+      "static-before-instance",
+      "variables-before-functions"
+    ],
+    "no-any": false,
+    "no-arg": true,
+    "no-attribute-decorator": true,
+    "no-bitwise": true,
+    "no-conditional-assignment": true,
+    "no-consecutive-blank-lines": [
+      true,
+      1
+    ],
+    "no-console": [
+      true,
+      "debug",
+      "info",
+      "log",
+      "time",
+      "timeEnd",
+      "trace"
+    ],
+    "no-construct": true,
+    "no-debugger": true,
+    "no-duplicate-variable": true,
+    "no-empty": false,
+    "no-eval": true,
+    "no-forward-ref": false,
+    "no-host-metadata-property": true,
+    "no-inferrable-types": false,
+    "no-input-rename": true,
+    "no-inputs-metadata-property": true,
+    "no-internal-module": true,
+    "no-irregular-whitespace": true,
+    "no-output-native": true,
+    "no-output-on-prefix": true,
+    "no-output-rename": true,
+    "no-outputs-metadata-property": true,
+    "no-require-imports": false,
+    "no-shadowed-variable": true,
+    "no-string-literal": false,
+    "no-switch-case-fall-through": true,
+    "no-trailing-whitespace": true,
+    "no-unused-expression": true,
+    "no-var-keyword": true,
+    "no-var-requires": false,
+    "object-literal-key-quotes": [
+      true,
+      "consistent-as-needed"
+    ],
+    "object-literal-sort-keys": false,
+    "one-line": [
+      true,
+      "check-open-brace",
+      "check-catch",
+      "check-else",
+      "check-whitespace"
+    ],
+    "ordered-imports": [
+      true,
+      {
+        "import-sources-order": "case-insensitive",
+        "named-imports-order": "case-insensitive",
+        "grouped-imports": true
+      }
+    ],
+    "prefer-const": true,
+    "prefer-template": true,
+    "quotemark": [
+      true,
+      "single",
+      "avoid-escape"
+    ],
+    "radix": true,
+    "semicolon": true,
+    "switch-default": true,
+    "trailing-comma": [
+      true,
+      {
+        "multiline": "always",
+        "singleline": "never"
+      }
+    ],
+    "triple-equals": [
+      true,
+      "allow-null-check"
+    ],
+    "typedef": [
+      true,
+      "call-signature",
+      "parameter",
+      "property-declaration",
+      "variable-declaration",
+      "member-variable-declaration"
+    ],
+    "typedef-whitespace": [
+      true,
+      {
+        "call-signature": "nospace",
+        "index-signature": "nospace",
+        "parameter": "nospace",
+        "property-declaration": "nospace",
+        "variable-declaration": "nospace"
+      }
+    ],
+    "use-lifecycle-interface": true,
+    "use-pipe-transform-interface": true,
+    "variable-name": [
+      true,
+      "allow-leading-underscore",
+      "ban-keywords"
+    ],
+    "whitespace": [
+      true,
+      "check-branch",
+      "check-decl",
+      "check-operator",
+      "check-separator",
+      "check-rest-spread",
+      "check-type",
+      "check-typecast",
+      "check-type-operator",
+      "check-preblock"
+    ]
+  }
+}
