@@ -22,6 +22,18 @@
             "styles": [
               "src/styles.scss"
             ]
+          },
+          "configurations": {
+            "production": {
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "commonChunk": true,
+              "vendorChunk": true,
+              "buildOptimizer": true
+            }
           }
         },
         "serve": {

@@ -1,3 +1,81 @@
 <h1>Dhill profile generator</h1>
 
-...
+<h2>Profile parameters</h2>
+
+<form (ngSubmit)="_generate()">
+  <div class="inputs">
+    <mat-form-field [appearance]="'fill'">
+      <mat-label>s</mat-label>
+      <input matInput type="number" name="s" [(ngModel)]="profile.s">
+    </mat-form-field>
+
+    <mat-form-field [appearance]="'fill'">
+      <mat-label>&alpha;</mat-label>
+      <input matInput type="number" name="alpha" [(ngModel)]="profile.alpha">
+    </mat-form-field>
+
+    <mat-form-field [appearance]="'fill'">
+      <mat-label>h</mat-label>
+      <input matInput type="number" name="h" [(ngModel)]="profile.h">
+    </mat-form-field>
+
+    <mat-form-field [appearance]="'fill'">
+      <mat-label>n</mat-label>
+      <input matInput type="number" name="n" [(ngModel)]="profile.n">
+    </mat-form-field>
+
+    <mat-form-field [appearance]="'fill'">
+      <mat-label>l<sub>1</sub></mat-label>
+      <input matInput type="number" name="l1" [(ngModel)]="profile.l1">
+    </mat-form-field>
+
+    <mat-form-field [appearance]="'fill'">
+      <mat-label>l<sub>2</sub></mat-label>
+      <input matInput type="number" name="l2" [(ngModel)]="profile.l2">
+    </mat-form-field>
+
+    <mat-form-field [appearance]="'fill'">
+      <mat-label>&beta;<sub>P</sub></mat-label>
+      <input matInput type="number" name="beta_p" [(ngModel)]="profile.beta_p">
+    </mat-form-field>
+
+    <mat-form-field [appearance]="'fill'">
+      <mat-label>&beta;</mat-label>
+      <input matInput type="number" name="beta" [(ngModel)]="profile.beta">
+    </mat-form-field>
+
+    <mat-form-field [appearance]="'fill'">
+      <mat-label>&beta;<sub>L</sub></mat-label>
+      <input matInput type="number" name="beta_l" [(ngModel)]="profile.beta_l">
+    </mat-form-field>
+
+    <mat-form-field [appearance]="'fill'">
+      <mat-label>r<sub>2</sub></mat-label>
+      <input matInput type="number" name="r2" [(ngModel)]="profile.r2">
+    </mat-form-field>
+  </div>
+  <div class="actions">
+    <button mat-raised-button [color]="'primary'" type="submit">Generate profile formula</button>
+  </div>
+</form>
+
+<div *ngIf="!!formula" class="formula">
+  <mat-card>
+    <mat-card-title>Dhill formula</mat-card-title>
+    <mat-card-content>
+      <div class="formula-content">
+        <h4>For <code>x</code> in <code>[0, {{formula.P.x}})</code>:</h4>
+        <code class="block">y(x) = {{formula.a}}*x^3 + {{formula.b}}*x^2 + {{formula.c}}*x</code>
+
+        <h4>For <code>x</code> in <code>[{{formula.P.x}}, {{formula.K.x}})</code>:</h4>
+        <code class="block">y(x) = {{formula.K_Rc.y}} - sqrt({{formula.rl * formula.rl}} - (x - {{formula.K_Rc.x}})^2)</code>
+
+        <h4>For <code>x</code> in <code>[{{formula.K.x}}, {{formula.L.x}})</code>:</h4>
+        <code class="block">y(x) = {{formula.L_Rc.y}} - sqrt({{formula.r2l * formula.r2l}} - (x - {{formula.L_Rc.x}})^2)</code>
+
+        <h4>For <code>x</code> in <code>[{{formula.L.x}}, {{formula.U.x}})</code>:</h4>
+        <code class="block">y(x) = {{formula.U_Rc.y}} - sqrt({{formula.r2 * formula.r2}} - (x - {{formula.U_Rc.x}})^2)</code>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>

@@ -1,0 +1,23 @@
+.inputs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.formula {
+  margin: 32px 0;
+}
+
+.formula-content {
+  padding: 16px;
+  text-align: center;
+}
+
+h4 {
+  margin: 0;
+}
+
+code.block {
+  display: block;
+  margin: 8px 0 32px;
+}

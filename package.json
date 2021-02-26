@@ -9,7 +9,7 @@
   "license": "MIT",
   "scripts": {
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build --prod",
     "lint": "ng lint"
   },
   "dependencies": {
